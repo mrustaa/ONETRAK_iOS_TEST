@@ -292,6 +292,19 @@
 
 
 
+- (IBAction)deleteAllHistory:(UIButton *)sender {
+    
+    [self.data removeAllObjects];
+    [self deleteAllHistoryCoreData];
+    
+    // инициализировать стартовый пробел (отступ)
+    self.data = [@[ @"" ] mutableCopy];
+    
+    [self.tableView reloadData];
+    
+}
+
+
 #pragma - CoreData
 
 // загрузки истории из БД  - в массив  self.data
@@ -357,7 +370,23 @@
     
     
 }
-
+// удаление истории из БД
+-(void)deleteAllHistoryCoreData {
+    
+    
+    // БД запрос вернуть все
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName: @"OneDay"];
+    NSArray *array = [_managedObjectContext  executeFetchRequest: fetchRequest    error: nil];
+    
+    // Убеждаемся, что получили массив.
+    for ( OneDay *oneDayData in array  ){
+        // удаляем из БД
+        [self.managedObjectContext deleteObject: oneDayData];
+        [self.managedObjectContext save:nil];
+    }
+    
+    
+}
 
 
 

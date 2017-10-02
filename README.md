@@ -1,4 +1,4 @@
-# ONETRAK_iOS_TEST
+# Тестовое задание ONETRAK_iOS_TEST
 
 Необходимо сделать приложение, показывающее статистику активности пользователя.
 
@@ -15,3 +15,8 @@
 
 Результат выполнения нужно оформить на GitHub. В качестве ответа ждем ссылку на ваш репозиторий.
 
+
+> [Само тестовое задание](https://github.com/PreppyLLC/ONETRAK_iOS_TEST)
+
+## Превью
+![image](https://github.com/mrustaa/gif_presentation/blob/master/OneTackTest/OneTackTest.gif)

@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4lr-wQ-hIS" id="qOy-X6-JhQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -68,7 +68,7 @@
                                         <rect key="frame" x="0.0" y="62" width="375" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HW5-ka-nif" id="xFe-5m-cWF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FA3-OZ-X5c">
@@ -182,11 +182,11 @@
                                         <rect key="frame" x="0.0" y="194" width="375" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iUZ-m8-enA" id="NbN-25-Smd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="en6-ms-Vjr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="172"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ruh-zq-6Xz">
@@ -311,6 +311,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="z4g-4i-7Rx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wnJ-AB-zOj"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teB-1c-Wih">
                                 <rect key="frame" x="0.0" y="30" width="375" height="44"/>

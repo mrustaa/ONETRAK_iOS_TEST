@@ -32,7 +32,11 @@
 
 #pragma - ViewController lifecycle
 
-
+// bool - счетчик, для добавления следующего дня, к данным
+// инициализируем меню - цель 4000 - textField - жест прикосновения что бы закрыть клавиатуру
+// инициализировать ячейку - это стартовый пробел (отступ)
+// загружаем историю из базы данных
+// линия разделяющая ячейки - очисть цвет - т.е. удалить
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,12 +56,11 @@
     
     // линия разделяющая ячейки - удалить
     self.tableView.separatorColor = [UIColor clearColor];
-    self.tableView.delegate     = self;
-    self.tableView.dataSource   = self;
+
     
     
 }
-
+// получаем конетекст базы данных
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -69,13 +72,12 @@
                                                       _managedObjectContext = note.userInfo[@"Context"];
                                                   }];
 }
-
+// стартовое анимированние ячеек
 - (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear:   animated];
     
     [self animateTableCells];
 }
-
 // стартовое анимированное возникновение ячеек
 - (void)animateTableCells {
     
@@ -267,6 +269,10 @@
 
 
 // инициализировать элементы для ЦЕЛИ
+// bool - меню  открыто/закрыто
+// цель     = @"4000";
+// textFiled = цель
+// создаем прикосновение что бы закрыть клавиатуру
 - (void)createTarget {
     
     // меню  открыто/закрыто
@@ -291,7 +297,7 @@
 }
 
 
-
+// кнопка удаления истории
 - (IBAction)deleteAllHistory:(UIButton *)sender {
     
     [self.data removeAllObjects];
